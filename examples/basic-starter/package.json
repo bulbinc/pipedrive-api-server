@@ -4,11 +4,11 @@
   "description": "Example application for running a Node Express app on AWS Lambda using Amazon API Gateway.",
   "main": "lambda.js",
   "config": {
-    "s3BucketName": "YOUR_UNIQUE_BUCKET_NAME",
-    "region": "YOUR_AWS_REGION",
+    "s3BucketName": "bulbinc-pipedrive-api",
+    "region": "ap-northeast-1",
     "cloudFormationStackName": "AwsServerlessExpressStack",
-    "functionName": "YOUR_SERVERLESS_EXPRESS_LAMBDA_FUNCTION_NAME",
-    "accountId": "YOUR_ACCOUNT_ID"
+    "functionName": "AwsServerlessExpressFunction",
+    "accountId": "055943311557"
   },
   "scripts": {
     "start": "node app.local.js",
@@ -41,8 +41,10 @@
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
     "cors": "^2.8.3",
+    "dotenv": "^8.2.0",
     "express": "^4.15.2",
-    "pug": "^2.0.4",
-    "lodash": ">=4.17.19"
+    "lodash": ">=4.17.19",
+    "pipedrive": "^10.4.3",
+    "pug": "^2.0.4"
   }
 }

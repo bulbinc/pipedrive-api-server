@@ -19,7 +19,7 @@ paths:
         responses:
           default:
             statusCode: 200
-        uri: arn:aws:apigateway:YOUR_AWS_REGION:lambda:path/2015-03-31/functions/arn:aws:lambda:YOUR_AWS_REGION:YOUR_ACCOUNT_ID:function:${stageVariables.ServerlessExpressLambdaFunctionName}/invocations
+        uri: arn:aws:apigateway:ap-northeast-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-northeast-1:055943311557:function:${stageVariables.ServerlessExpressLambdaFunctionName}/invocations
         passthroughBehavior: when_no_match
         httpMethod: POST
         type: aws_proxy
@@ -48,7 +48,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
               method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
-              method.response.header.Access-Control-Allow-Origin: "'https://example.com'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
         passthroughBehavior: when_no_match
         requestTemplates:
           application/json: "{\"statusCode\": 200}"
@@ -64,7 +64,7 @@ paths:
         type: string
       responses: {}
       x-amazon-apigateway-integration:
-        uri: arn:aws:apigateway:YOUR_AWS_REGION:lambda:path/2015-03-31/functions/arn:aws:lambda:YOUR_AWS_REGION:YOUR_ACCOUNT_ID:function:${stageVariables.ServerlessExpressLambdaFunctionName}/invocations
+        uri: arn:aws:apigateway:ap-northeast-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-northeast-1:055943311557:function:${stageVariables.ServerlessExpressLambdaFunctionName}/invocations
         httpMethod: POST
         type: aws_proxy
     options:
@@ -92,7 +92,7 @@ paths:
             responseParameters:
               method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
               method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
-              method.response.header.Access-Control-Allow-Origin: "'https://example.com'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
         passthroughBehavior: when_no_match
         requestTemplates:
           application/json: "{\"statusCode\": 200}"
