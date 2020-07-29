@@ -99,7 +99,7 @@ router.post('/contact', cors(), async (req, res, next) => {
         phone: [phone],
       }
     };
-    const { data } = await pipedrive.PersonsController.addAPerson({});
+    const { data } = await pipedrive.PersonsController.addAPerson(personInput);
     person = data;
   } catch (error) {
     next(error);
